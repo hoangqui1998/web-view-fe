@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>FEOL Portal</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link class="js-stylesheet" href="https://cdn.ubank.vn/portal/css/light.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="../static/js/login.js"></script>
+</head>
+
+<body>
+    <div data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
+        <main class="d-flex w-100 h-100">
+            <div class="container d-flex flex-column">
+                <div class="row vh-100">
+                    <div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
+                        <div class="d-table-cell align-middle">
+                            <div class="card mt-4">
+                                <div class="card-body">
+                                    <div class="m-sm-4">
+                                        <div class="text-center" style="margin-bottom: 10px;">
+                                            <img src="../shared/images/fecredit.png" alt="Logo-FE" class="img-fluid" width="360" height="132">
+                                        </div>
+                                        <!-- <div class="alert alert-danger alert-outline alert-dismissible mt-4" role="alert">
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                            <div class="alert-icon">
+                                                <i class="far fa-fw fa-bell"></i>
+                                            </div>
+                                            <div class="alert-message">
+                                                <strong>{{errorLogin}}</strong>
+                                            </div>
+                                        </div> -->
+                                        <form>
+                                            <div class="mb-3">
+                                                <label class="form-label">Username</label>
+                                                <input class="form-control form-control-lg" 
+                                                    type="text" name="text" placeholder="Enter your username" >
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Password</label>
+                                                <div class="input-group mb-3">
+                                                    <input class="form-control form-control-lg" 
+                                                        type="password" name="password" 
+                                                        placeholder="Enter your password">
+                                                    <!-- <span class="input-group-text" style="cursor: pointer;">
+                                                        <i class="align-middle fas fa-fw"></i>
+                                                    </span> -->
+                                                </div>
+                                                <a href="https://sso.ubank.vn/forgotPassword?client_id=47rj3rlovbcgdjvm9j5uc9glcj&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https://portal.ubank.vn/login">Forgot password?</a>
+                                            </div>
+                                            <div class="text-center mt-3">
+                                                <div class="text-center mt-3">
+                                                    <img class="" type="button" src="../shared/images/ms-login-logo.svg" onclick="handleLogin()"/>
+                                                </div>
+                                                <p class="text-center mt-4">Need an account? 
+                                                    <a href="https://sso.ubank.vn/signup?client_id=47rj3rlovbcgdjvm9j5uc9glcj&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https://portal.ubank.vn/login">
+                                                        Sign up
+                                                    </a>
+                                                </p>
+                                                <input type="text" hidden value="Version 2.0.2">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
