@@ -1,3 +1,50 @@
+const { createApp } = Vue;
+
+const app = createApp({
+    data() {
+        return {
+            MicrosoftLogin: './shared/images/ms-login-logo.svg',
+            SignUpHref: 'https://sso.ubank.vn/signup?client_id=47rj3rlovbcgdjvm9j5uc9glcj&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https://portal.ubank.vn/login',
+            ForgotPWD: 'https://sso.ubank.vn/forgotPassword?client_id=47rj3rlovbcgdjvm9j5uc9glcj&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https://portal.ubank.vn/login',
+            logoImg: './shared/images/fecredit.png',
+            logoVN: './shared/images/vietnam.png',
+            logoUK: './shared/images/UK.png',
+            lang: 'vi',
+            i18n: {
+                'vi': {
+                    'Username': 'Tên tài khoản đăng nhập',
+                    'Password': 'Mật khẩu',
+                    'ForgotPassword': 'Bạn quên mật khẩu?',
+                    'SignUp': 'Tại đây',
+                    'EnterUsername': 'Nhập tài khoản đăng nhập',
+                    'EnterPassword': 'Nhập mật khẩu',
+                    'NeedAccount': 'Đăng ký tài khoản tại?'
+                },
+                'en': {
+                    'Username': 'Username',
+                    'Password': 'Password',
+                    'ForgotPassword': 'Forgot password?',
+                    'SignUp': 'Sign up',
+                    'EnterUsername': 'Enter your username',
+                    'EnterPassword': 'Enter your password',
+                    'NeedAccount': 'Need an account? '
+                }
+            }
+        }
+    },
+    methods: {
+        switchLanguage() {
+            if (this.lang === 'vi') {
+                this.lang = 'en';
+            } else {
+                this.lang = 'vi';
+            }
+        }
+    }
+});
+
+
+
 function handleLogin() {
     // console.log("Hello world!");
     // var clientId = 'c5058ea6-a4ad-44de-ad74-ec502ed357b5';
@@ -66,3 +113,4 @@ async function getAccessToken() {
 
 window.onload = getAccessToken;
 
+app.mount('#app');
