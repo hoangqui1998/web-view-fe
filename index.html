@@ -22,17 +22,16 @@
     <div id="app">
         <section class="bg-white section-header" id="receive-header" class="show_header_and_btn">
             <div class="container-fluid">
-                <div style="padding: 20px;" class="row">
+                <div style="padding: 10px;margin-right: 50px;" class="row float-end">
                     <div class="col-12 header-right-logo ">
                         <div class="switch-language" @click="switchLanguage">
                             <img v-if="lang === 'vi'" :src="logoVN" alt="lang-vi" width="32" height="16">
-                            <img v-if="lang === 'en'" :src="logoUK" alt="lang-en" width="32" height="16">
+                            <img v-if="lang === 'en'" :src="logoEN" alt="lang-en" width="32" height="16">
                             <p style="margin: 0 0 0 6px;">{{ lang === 'vi' ? 'VN' : 'EN' }}</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
         </section>
         <section>
             <div data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
@@ -64,10 +63,10 @@
                                                             <img class="" type="button" :src="MicrosoftLogin" onclick="handleLogin()"/>
                                                             <div id="token"></div>
                                                         </div>
-                                                        <p class="text-center mt-4" v-text="i18n[lang]['NeedAccount']">
+                                                        <p class="text-center mt-3">{{ i18n[lang]['NeedAccount'] }}
+                                                            <a :href="SignUpHref">{{ i18n[lang]['SignUp'] }}</a>
                                                         </p>
-                                                        <a :href="SignUpHref" v-text="i18n[lang]['SignUp']"></a>
-                                                        
+                                                          
                                                         <input type="text" hidden value="Version 2.0.2">
                                                     </div>
                                                 </form>
